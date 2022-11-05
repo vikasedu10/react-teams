@@ -1,0 +1,90 @@
+.fa-icon-calling {
+    font-size: 20px;
+    padding: 8px;
+}
+
+.fa-icon-group {
+    color: green;
+    font-size: 25px;
+    filter: brightness(20%);
+}
+
+
+.option-list {
+    background-color: rgb(238, 238, 238);
+}
+
+/* scrollbar */
+.option-list-outer-div {
+    overflow-y: scroll;
+    min-height: 92vh;
+    max-height: 92vh;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.option-list-outer-div::-webkit-scrollbar {
+    width: 6px;
+}
+/* Handle */
+.option-list-outer-div::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+/* Handle on hover */
+.option-list-outer-div::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+
+
+.option-content {
+    background-color: rgb(248, 248, 248);
+}
+.option-content-chats-div {
+    min-height: 73vh;
+    max-height: 73vh;
+    overflow-y: scroll;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.option-content-chats-div::-webkit-scrollbar {
+    width: 6px;
+}
+/* Handle */
+.option-content-chats-div::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+/* Handle on hover */
+.option-content-chats-div::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+/* Scrollbar end */
+
+.row {
+    --bs-gutter-x: 0;
+}
+
+.people-thumbnail {
+    width: 50px; 
+    height: 50px;
+    object-fit: cover;
+    border-radius: 42px;
+}
+
+.people-thumbnail-msg {
+    width: 40px; 
+    height: 40px;
+    object-fit: cover;
+    border-radius: 42px;
+}
+
+.message-style {
+    min-width: 100px;
+    max-width: 500px;
+}
+
+.message-container {
+    margin-top: 16px;
+}
+
+.one-message-box-self {
+    padding-right: 10%;
+}

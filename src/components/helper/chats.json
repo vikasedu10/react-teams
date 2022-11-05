@@ -1,0 +1,192 @@
+[
+    {
+        "id": 10203,
+        "status": "active",
+        "enterprise": "pratiksh.kp@accenture.com",
+        "name": "Kumar S, Pratiksh",
+        "image": "https://media.istockphoto.com/id/1350600402/photo/beauty-portrait-of-african-american-girl-in-sunglasses.jpg?b=1&s=170667a&w=0&k=20&c=j2LC1_vwm6p9bMPJnPlNd-QEUv4uri2gM-w1AkpIQWc=",
+        "chats": [
+            {
+                "from": "sender",
+                "message": "Hi Vikas"
+            },
+            {
+                "from": "self",
+                "message": "Hi Pratiksh"
+            },
+            {
+                "from": "self",
+                "message": "How are you?"
+            },
+            {
+                "from": "sender",
+                "message": "I'm good. How are you doing?"
+            },
+            {
+                "from": "sender",
+                "message": "Doing good. This is the Longest AWS Series on Youtube in Hindi/Urdu. My aim is to empower all.who are not good in english, but they are willing to learn new things.AWS Series me main try krunga aapko maxiMum lab and theory padhane ki."
+            }
+        ]
+    },
+    {
+        "id": 10204,
+        "status": "inactive",
+        "enterprise": "naveen.kp@accenture.com",
+        "name": "Raj K P, Naveen",
+        "image": "https://media.istockphoto.com/id/468311325/photo/portrait-of-stressed-woman-biting-fingernail.jpg?s=612x612&w=0&k=20&c=WEQ15d0WzMnQQg81kuR-pazZKcp_hCb-TDjDDQ0Pvr0=",
+        "chats": [
+            {
+                "from": "self",
+                "message": "Hi Naveen"
+            },
+            {
+                "from": "sender",
+                "message": "Hi Vikas"
+            },
+            {
+                "from": "self",
+                "message": "How are you?"
+            },
+            {
+                "from": "sender",
+                "message": "I'm good. How are you doing?"
+            },
+            {
+                "from": "sender",
+                "message": "I'm good. This is just a dummy static content pulled from variable JSON."
+            },
+            {
+                "from": "self",
+                "message": "Fine."
+            }
+        ]
+    },
+    {
+        "id": 10203,
+        "status": "active",
+        "enterprise": "pratiksh.kp@accenture.com",
+        "name": "Kumar S, Pratiksh",
+        "image": "https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY=",
+        "chats": [
+            {
+                "from": "sender",
+                "message": "Hi Vikas"
+            },
+            {
+                "from": "self",
+                "message": "Hi Pratiksh"
+            },
+            {
+                "from": "self",
+                "message": "How are you?"
+            },
+            {
+                "from": "sender",
+                "message": "I'm good. How are you doing?"
+            },
+            {
+                "from": "sender",
+                "message": "The start and end parameters specifies the part of the string to extract."
+            }
+        ]
+    },
+    {
+        "id": 10204,
+        "status": "inactive",
+        "enterprise": "naveen.kp@accenture.com",
+        "name": "Raj K P, Naveen",
+        "image": "https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY=",
+        "chats": [
+            {
+                "from": "self",
+                "message": "Hi Naveen"
+            },
+            {
+                "from": "sender",
+                "message": "Hi Vikas"
+            },
+            {
+                "from": "self",
+                "message": "How are you?"
+            },
+            {
+                "from": "sender",
+                "message": "I'm good. How are you doing?"
+            },
+            {
+                "from": "sender",
+                "message": "The current locale is based on the language settings of the browser."
+            },
+            {
+                "from": "self",
+                "message": "Fine."
+            }
+        ]
+    },
+    {
+        "id": 10204,
+        "status": "inactive",
+        "enterprise": "naveen.kp@accenture.com",
+        "name": "Raj K P, Naveen",
+        "image": "https://media.istockphoto.com/id/637933814/photo/portrait-of-businessman-smiling-in-business-office.jpg?s=612x612&w=0&k=20&c=Jd31YY_NSG9zp-wa-dGSNR1DcWwn7xxSt4K7wICoIfc=",
+        "chats": [
+            {
+                "from": "self",
+                "message": "Hi Naveen"
+            },
+            {
+                "from": "sender",
+                "message": "Hi Vikas"
+            },
+            {
+                "from": "self",
+                "message": "How are you?"
+            },
+            {
+                "from": "sender",
+                "message": "I'm good. How are you doing?"
+            },
+            {
+                "from": "sender",
+                "message": "Doing good. This is the Longest AWS Series on Youtube in Hindi/Urdu. My aim is to empower all.who are not good in english, but they are willing to learn new things.AWS Series me main try krunga aapko maxiMum lab and theory padhane ki."
+            },
+            {
+                "from": "self",
+                "message": "Fine."
+            }
+        ]
+    },
+    {
+        "id": 10204,
+        "status": "inactive",
+        "enterprise": "naveen.kp@accenture.com",
+        "name": "Raj K P, Naveen",
+        "image": "https://media.istockphoto.com/id/938709362/photo/portrait-of-a-girl.jpg?s=612x612&w=0&k=20&c=UQGXpeiLrI78nO1B9peUn0D0fCSRrm-J8xohMWG2Lms=",
+        "chats": [
+            {
+                "from": "self",
+                "message": "Hi Naveen"
+            },
+            {
+                "from": "sender",
+                "message": "Hi Vikas"
+            },
+            {
+                "from": "self",
+                "message": "How are you?"
+            },
+            {
+                "from": "sender",
+                "message": "I'm good. How are you doing?"
+            },
+            {
+                "from": "sender",
+                "message": "Doing good. This is the Longest AWS Series on Youtube in Hindi/Urdu. My aim is to empower all.who are not good in english, but they are willing to learn new things.AWS Series me main try krunga aapko maxiMum lab and theory padhane ki."
+            },
+            {
+                "from": "self",
+                "message": "Fine."
+            }
+        ]
+    }
+]
