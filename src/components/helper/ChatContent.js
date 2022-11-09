@@ -1,96 +1,300 @@
-import React from 'react'
-import people_thumbnail_4 from '../../static/images/people/4.jpg';
-import people_thumbnail_1 from '../../static/images/people/1.jpg';
+import React, { useState, useEffect } from 'react'
 import '../Icon.css';
 import { useLocation } from 'react-router-dom';
+import { WriteMessage } from './WriteMessage';
+import Chats from "./chats.json";
+import { ChatBoxFromSelf, ChatBoxFromSender, ProfileSection } from './SingleChatDiv';
 
-export const ChatContent = () => {
+export const ChatContent = (props) => {
     const location = useLocation()
     const testStyle = {
         height: "85%"
     }
 
+    const [message, setMessage] = useState("");
+
+    const sendMessage = (e) => {
+        e.preventDefault();
+        const enterprise = "inampudi.dali.priya@accenture.com";
+        if (!message) {
+            alert("Please type a message to send.")
+        } else {
+            Chats.map((people) => {
+                if (people["enterprise"] === enterprise) {
+                    people.chats.concat({ from: "self", message: message })
+                }
+            })
+        }
+        console.log(message, "Message sent!!")
+        console.log("Message sent:: ", Chats[1]["chats"])
+
+        setMessage("");
+    }
+
+    let initPeopleChat = [
+        {
+            "uid": 10203,
+            "status": "active",
+            "enterprise": "manpreet.b.bhatia@accenture.com",
+            "name": "Bhatia B, Manpreet",
+            "image": "https://media.istockphoto.com/id/1350600402/photo/beauty-portrait-of-african-american-girl-in-sunglasses.jpg?b=1&s=170667a&w=0&k=20&c=j2LC1_vwm6p9bMPJnPlNd-QEUv4uri2gM-w1AkpIQWc=",
+            "chats": [
+                {
+                    "from": "sender",
+                    "message": "Hi Vikas"
+                },
+                {
+                    "from": "self",
+                    "message": "Hi Manpreet"
+                },
+                {
+                    "from": "self",
+                    "message": "How are you?"
+                },
+                {
+                    "from": "sender",
+                    "message": "I'm good. How are you doing?"
+                },
+                {
+                    "from": "sender",
+                    "message": "Doing good. 😁😁 This is the Longest AWS Series on Youtube in Hindi/Urdu. My aim is to empower all.who are not good in english, but they are willing to learn new things.AWS Series me main try krunga aapko maxiMum lab and theory padhane ki."
+                },
+                {
+                    "from": "self",
+                    "message": "How are you?"
+                },
+                {
+                    "from": "sender",
+                    "message": "I'm good. How are you doing?"
+                },
+                {
+                    "from": "sender",
+                    "message": "Doing good. 😁😁 This is the Longest AWS Series on Youtube in Hindi/Urdu. My aim is to empower all.who are not good in english, but they are willing to learn new things.AWS Series me main try krunga aapko maxiMum lab and theory padhane ki."
+                }
+            ]
+        },
+        {
+            "uid": 10204,
+            "status": "inactive",
+            "enterprise": "inampudi.dali.priya@accenture.com",
+            "name": "Inampudi, Dali Priya",
+            "image": "https://media.istockphoto.com/id/468311325/photo/portrait-of-stressed-woman-biting-fingernail.jpg?s=612x612&w=0&k=20&c=WEQ15d0WzMnQQg81kuR-pazZKcp_hCb-TDjDDQ0Pvr0=",
+            "chats": [
+                {
+                    "from": "self",
+                    "message": "Hi Dalipriya 🙌"
+                },
+                {
+                    "from": "sender",
+                    "message": "Hi Vikas"
+                },
+                {
+                    "from": "self",
+                    "message": "How are you?"
+                },
+                {
+                    "from": "sender",
+                    "message": "I'm good. How are you doing?"
+                },
+                {
+                    "from": "sender",
+                    "message": "I'm good. This is just a dummy static content pulled from variable JSON."
+                },
+                {
+                    "from": "self",
+                    "message": "Fine."
+                },
+                {
+                    "from": "self",
+                    "message": "👍"
+                }
+            ]
+        },
+        {
+            "uid": 10203,
+            "status": "active",
+            "enterprise": "pratiksh.kp@accenture.com",
+            "name": "Kumar S, Pratiksh",
+            "image": "https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY=",
+            "chats": [
+                {
+                    "from": "sender",
+                    "message": "Hi Vikas"
+                },
+                {
+                    "from": "self",
+                    "message": "Hi Pratiksh"
+                },
+                {
+                    "from": "self",
+                    "message": "How are you?"
+                },
+                {
+                    "from": "sender",
+                    "message": "I'm good. How are you doing?"
+                },
+                {
+                    "from": "sender",
+                    "message": "The start and end parameters specifies the part of the string to extract. 🔥🔥"
+                }
+            ]
+        },
+        {
+            "uid": 10204,
+            "status": "inactive",
+            "enterprise": "naveen.kp@accenture.com",
+            "name": "Raj K P, Naveen",
+            "image": "https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY=",
+            "chats": [
+                {
+                    "from": "self",
+                    "message": "Hi Naveen"
+                },
+                {
+                    "from": "sender",
+                    "message": "Hi Vikas"
+                },
+                {
+                    "from": "self",
+                    "message": "How are you?"
+                },
+                {
+                    "from": "sender",
+                    "message": "I'm good. How are you doing?"
+                },
+                {
+                    "from": "sender",
+                    "message": "The current locale is based on the language settings of the browser."
+                },
+                {
+                    "from": "self",
+                    "message": "Fine."
+                }
+            ]
+        },
+        {
+            "uid": 10204,
+            "status": "inactive",
+            "enterprise": "puneet.singh@accenture.com",
+            "name": "Singh P, Puneet",
+            "image": "https://media.istockphoto.com/id/637933814/photo/portrait-of-businessman-smiling-in-business-office.jpg?s=612x612&w=0&k=20&c=Jd31YY_NSG9zp-wa-dGSNR1DcWwn7xxSt4K7wICoIfc=",
+            "chats": [
+                {
+                    "from": "self",
+                    "message": "Hi Puneet"
+                },
+                {
+                    "from": "sender",
+                    "message": "Hi Vikas 👍"
+                },
+                {
+                    "from": "self",
+                    "message": "How are you?"
+                },
+                {
+                    "from": "sender",
+                    "message": "I'm good. How are you doing?"
+                },
+                {
+                    "from": "sender",
+                    "message": "Doing good. This is the Longest AWS Series on Youtube in Hindi/Urdu. My aim is to empower all.who are not good in english, but they are willing to learn new things.AWS Series me main try krunga aapko maxiMum lab and theory padhane ki."
+                },
+                {
+                    "from": "self",
+                    "message": "Fine."
+                }
+            ]
+        },
+        {
+            "uid": 10204,
+            "status": "inactive",
+            "enterprise": "Sudheer.Chaudhary@accenture.com",
+            "name": "Chaudhary D, Sudheer",
+            "image": "https://media.istockphoto.com/id/938709362/photo/portrait-of-a-girl.jpg?s=612x612&w=0&k=20&c=UQGXpeiLrI78nO1B9peUn0D0fCSRrm-J8xohMWG2Lms=",
+            "chats": [
+                {
+                    "from": "self",
+                    "message": "Hi Sudheer 😊"
+                },
+                {
+                    "from": "sender",
+                    "message": "Hi Vikas"
+                },
+                {
+                    "from": "self",
+                    "message": "How are you?"
+                },
+                {
+                    "from": "sender",
+                    "message": "I'm good. How are you doing?"
+                },
+                {
+                    "from": "sender",
+                    "message": "Doing good. This is the Longest AWS Series on Youtube in Hindi/Urdu. My aim is to empower all.who are not good in english, but they are willing to learn new things.AWS Series me main try krunga aapko maxiMum lab and theory padhane ki."
+                },
+                {
+                    "from": "self",
+                    "message": "👍👍"
+                }
+            ]
+        }
+    ]
+
+    const saveMessage = (message) => {
+        console.log("Saving message: ", message);
+        const myChat = {
+            from: "self",
+            message: message,
+        }
+
+        setPeopleChat([...peopleChat, myChat])
+    }
+
+    const [peopleChat, setPeopleChat] = useState(initPeopleChat);
+    useEffect(() => {
+
+    }, [peopleChat]);
+
+
+
     return (
         <>
-            <div className='d-flex justify-content-between my-3 mx-3'>
-                <div className='d-flex justify-content-start'>
-                    <img className='people-thumbnail border border-dark' src={location.state["image"]} />
-                    <div className='my-auto mx-2'>
-                        <strong>{location.state["name"]}</strong>
-                    </div>
-                    <div className='mx-1 my-auto'>
-                        <ul className="nav nav-tabs border-0">
-                            <li className="nav-item mx-0">
-                                <a className="p-2 nav-link active" aria-current="page" href="#">Chat</a>
-                            </li>
-                            <li className="nav-item mx-0">
-                                <a className="p-2 nav-link" href="#">Files</a>
-                            </li>
-                            <li className="nav-item mx-0">
-                                <a className="p-2 nav-link" href="#">Organization</a>
-                            </li>
-                            <li className="nav-item mx-0">
-                                <a className="p-2 nav-link">Activity</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div className=''>
-                    <i className="fa-icon-calling fa-solid fa-video"></i>
-                    <i className="fa-icon-calling fa-solid fa-phone"></i>
-                    <i className="fa-icon-calling fa-solid fa-person-military-to-person"></i>
-                </div>
-            </div>
+            <div className='col-8 option-content border'>
+                {props.currentChatState["selected"] !== 'defaultFirst' ?
+                    Chats.map((e, index) => {
+                        if (e["enterprise"] === props.currentChatState) {
+                            return (
+                                <>
+                                    <ProfileSection name={e["name"]} image={e["image"]} />
+                                    <div className="option-content-chats-div align-items-start flex-column mb-1 ms-auto mx-4 border" style={testStyle}>
 
-
-            <div className="option-content-chats-div border d-flex align-items-start flex-column mb-1 ms-auto mx-4 message-container border" style={testStyle}>
-
-                {location.state["chats"].map((msg) => {
-                    return msg["from"] === "sender" ? (
-                        <div className='one-message-box container my-3 md-4 d-flex justify-content-start'>
-                            <div className='mx-2'>
-                                <img className='people-thumbnail-msg' src={location.state["image"]} alt="Tom" />
-                            </div>
-                            <div>
-                                <span>{location.state["name"]}</span>
-                                <p className='message-style'>{msg.message}</p>
-                            </div>
-                        </div>
-                    )
+                                        {e["chats"].map((msg, index) => {
+                                            return msg["from"] === "sender" ?
+                                                <ChatBoxFromSender index={index} image={e["image"]} message={msg.message} name={e["name"]} />
+                                                :
+                                                <ChatBoxFromSelf index={index} message={msg.message} />
+                                        })}
+                                    </div>
+                                    <WriteMessage setMessage={setMessage} sendMessage={sendMessage} message={message} />
+                                </>
+                            )
+                        }
+                    })
                     :
-                    (
-                    <div className='d-flex justify-content-end my-2 one-message-box-self container my-2 md-4 d-flex justify-content-start'>
-                        <div>
-                            <span>Yesterday 16:04</span>
-                            <p className='message-style'>You: {msg.message}</p>
-                        </div>
+                    <>
+                    <ProfileSection name={Chats[0]["name"]} image={Chats[0]["image"]} />
+                    <div className="option-content-chats-div align-items-start flex-column mb-1 ms-auto mx-4 border" style={testStyle}>
+
+                        {Chats[0]["chats"].map((msg, index) => {
+                            return msg["from"] === "sender" ?
+                                <ChatBoxFromSender index={index} image={Chats[0]["image"]} message={msg.message} name={Chats[0]["name"]} />
+                                :
+                                <ChatBoxFromSelf index={index} message={msg.message} />
+                        })}
                     </div>
-                    )
-                })}
-            </div>
-            <div>
-                <div className="one-message-box container my-2 md-4 d-flex justify-content-start">
-                    <form className="d-flex col-12" role="search">
-                        <input
-                            className="form-control me-2"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                        />
-                        <button className="border-0" type="submit">
-                        <i class="fa-icon-calling fa-solid fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-                <div className='d-flex mx-3 justify-content-start'>
-                <i className="fa-icon-calling fa-solid fa-paperclip"></i>
-                <i className="fa-icon-calling fa-regular fa-face-smile"></i>
-                <i className="fa-icon-calling fa-brands fa-github"></i>
-                <i className="fa-icon-calling fa-solid fa-share-from-square"></i>
-                <i className="fa-icon-calling fa-solid fa-hourglass-start"></i>
-                <i className="fa-icon-calling fa-solid fa-note-sticky"></i>
-                <i className="fa-icon-calling fa-solid fa-ellipsis"></i>
-                </div>
+                    <WriteMessage setMessage={setMessage} sendMessage={sendMessage} message={message} />
+                    </>
+                }
             </div>
         </>
     )

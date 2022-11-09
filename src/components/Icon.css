@@ -39,8 +39,8 @@ background: #555;
     background-color: rgb(248, 248, 248);
 }
 .option-content-chats-div {
-    min-height: 73vh;
-    max-height: 73vh;
+    min-height: 72vh;
+    max-height: 72vh;
     overflow-y: scroll;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -82,7 +82,7 @@ background: #555;
 }
 
 .message-container {
-    margin-top: 16px;
+    margin-top: 0px;
 }
 
 .one-message-box-self {

@@ -38,7 +38,7 @@ export const ActivityContent = () => {
                 <div className='my-3 mx-4'>
 
                 <h3 className='col-7'>Message in the Advanced Technology Centers in the Philippines community</h3>
-                <p className='my-4 col-9'>
+                <div className='my-4 col-9'>
                     Did you miss the Q1 FY23 INTERACT yesterday? Catch the replay now and discover how we create lasting value and continue being loved by clients, communities, and people everywhere!
                     If you attended the virtual and in-person sessions yesterday, you can still join our photo contest. Post your INTERACT photo booth pictures and in the caption, share with us why you chose the frame or handheld prop. Don’t forget to include the #WeAreTech360.
                     <br />
@@ -47,7 +47,7 @@ export const ActivityContent = () => {
                         Watch out for the announcement of raffle winners next week.  You may be one of our three lucky winners of Apple Airpods!
                     </strong>
                     </div>
-                </p>
+                </div>
                 </div>
             </div>
         </>
