@@ -8,8 +8,9 @@ import {
 } from 'react-router-dom'
 import { Chat } from "./components/Chat";
 import { Activity } from "./components/Activity";
-import { ChatContent } from "./components/helper/ChatContent";
-import { ActivityContent } from "./components/helper/ActivityContent";
+import { ChatContent } from "./components/helper/chats/ChatContent";
+import { ActivityContent } from "./components/helper/activity/ActivityContent";
+import { FeedContent } from "./components/helper/feed/FeedContent";
 
 function App() {
   return (
@@ -20,9 +21,12 @@ function App() {
         <Route path="/" element={<Navigate replace to="/teams" />} />
 
         <Route path="/teams" element={<Home />}>
+          <Route path="feed" element={<FeedContent />} />
+
           <Route path="activity" element={<Activity />}>
             <Route path=":activityId" element={<ActivityContent />} />
           </Route>
+          
           <Route path="chat" element={<Chat />}>
             <Route path=":enterpriseId" element={<ChatContent />} />
           </Route>

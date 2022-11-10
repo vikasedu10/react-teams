@@ -1,27 +1,22 @@
 import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
-import { Chat } from './Chat';
-import { ChatContent } from './helper/ChatContent';
-import { ChatList } from './helper/ChatList';
-import { ActivityList } from './helper/ActivityList';
-import { ChatListFull } from './helper/ChatListFull';
 import { SidePaneOptions } from './helper/SidePaneOptions';
+import { ChatList } from './helper/chats/ChatList';
 import './Home.css';
+import { ActivityContent, FeedContent } from './helper/feed/FeedContent';
+import { ActivityList } from './helper/activity/ActivityList';
 
 export const Home = () => {
-  const [currrentState, setCurrentState] = useState({selected: "Chats"})
-  const HomeStyle = {
-    height: "80vh",
-  }
-  return (
-    <div style={HomeStyle} className='row content-div'>
-      <SidePaneOptions currrentState={currrentState} setCurrentState={setCurrentState} />
+  const [currrentState, setCurrentState] = useState({ selected: "chat" })
 
-      { currrentState === "Activity" || window.location.pathname.match('activity') ?
-      <ActivityList />
-      :
-      <ChatList />
-      }
-    </div>
-  )
+  if (currrentState === 'feed' || window.location.pathname.match('feed')) {
+    return <div className='row content-div'><SidePaneOptions /><FeedContent /></div>
+
+  } else if (currrentState === 'chat'|| window.location.pathname.match('chat')) {
+    return <div className='row content-div'><SidePaneOptions /><ChatList /></div>
+
+  } else if (currrentState === 'activity'|| window.location.pathname.match('activity')) {
+    return <div className='row content-div'><SidePaneOptions /><ActivityList /></div>
+  } else {
+    return <div className='row content-div'><SidePaneOptions /><ChatList /></div>
+  }
 }

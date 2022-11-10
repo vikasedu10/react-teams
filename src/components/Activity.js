@@ -1,6 +1,6 @@
 import React from 'react'
-import { ActivityContent } from './helper/ActivityContent'
-import { ActivityList } from './helper/ActivityList'
+import { ActivityContent } from './helper/activity/ActivityContent'
+import { ActivityList } from './helper/activity/ActivityList'
 
 export const Activity = () => {
   return (

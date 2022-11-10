@@ -1,0 +1,29 @@
+import React from 'react'
+
+export const ActivityData = (props) => {
+  return (
+    <div className='activities-div'>
+        <strong>{props.activity.title}</strong>
+        <div className='my-2 col-12'>
+            {props.activity.description}
+            <hr />
+        </div>
+    </div>
+  )
+}
+
+export const EditActivityData = (props) => {
+  return (
+    <div className='activities-div'>
+      <form className='border'>
+        <div className="mb-3">
+            <input type="text" value={props.title} onChange={(e) => { props.setTitle(e.target.value) }} className="form-control" id="title" placeholder="Your title here." />
+        </div>
+        <div className="mb-3">
+            <textarea value={props.description} onChange={(e) => { props.setDescription(e.target.value) }} className="form-control" placeholder='Your activity to post' id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button type='submit' className='btn btn-success btn-sm'>Add activity</button>
+    </form>
+    </div>
+  )
+}

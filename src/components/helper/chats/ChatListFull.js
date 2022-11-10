@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom';
 import Chats from "./chats.json";
-import people_thumbnail_1 from '../../static/images/people/1.jpg';
+import people_thumbnail_1 from '../../../static/images/people/1.jpg';
 
 export const ChatListFull = () => {
     return (

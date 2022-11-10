@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
-import people_thumbnail_1 from '../../static/images/people/1.jpg';
-import '../Icon.css';
+import people_thumbnail_1 from '../../../static/images/people/1.jpg';
+import '../../Icon.css';
 import { ChatContent } from './ChatContent';
 import Chats from "./chats.json";
 
@@ -10,7 +10,7 @@ export const ChatList = (props) => {
     const navigate = useNavigate()
     return (
         <>
-            <div className='row col-3'>
+            <div className='col-3'> {/* Add 'row' class if anything breaks */}
                 <div className='d-flex justify-content-between my-3 px-3'>
                     <h4>Chat</h4>
                     <div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import '../Icon.css';
+import '../../Icon.css';
 import { useLocation } from 'react-router-dom';
 import { WriteMessage } from './WriteMessage';
 import Chats from "./chats.json";
@@ -261,18 +261,17 @@ export const ChatContent = (props) => {
         <>
             <div className='col-8 option-content border'>
                 {props.currentChatState["selected"] !== 'defaultFirst' ?
-                    Chats.map((e, index) => {
+                    Chats.map((e) => {
                         if (e["enterprise"] === props.currentChatState) {
                             return (
                                 <>
-                                    <ProfileSection name={e["name"]} image={e["image"]} />
+                                    <ProfileSection key={e.id} name={e["name"]} image={e["image"]} />
                                     <div className="option-content-chats-div align-items-start flex-column mb-1 ms-auto mx-4 border" style={testStyle}>
-
-                                        {e["chats"].map((msg, index) => {
+                                        {e["chats"].map((msg) => {
                                             return msg["from"] === "sender" ?
-                                                <ChatBoxFromSender index={index} image={e["image"]} message={msg.message} name={e["name"]} />
+                                                <ChatBoxFromSender key={msg.id} image={e["image"]} message={msg.message} name={e["name"]} />
                                                 :
-                                                <ChatBoxFromSelf index={index} message={msg.message} />
+                                                <ChatBoxFromSelf key={msg.id} message={msg.message} />
                                         })}
                                     </div>
                                     <WriteMessage setMessage={setMessage} sendMessage={sendMessage} message={message} />

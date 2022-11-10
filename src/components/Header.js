@@ -13,12 +13,12 @@ export const Header = (props) => {
   return (
     <>
 
-      <nav className="navbar navbar-expand-lg bg-light">
+      <nav className="navbar-dark navbar navbar-expand-lg">
         <div className="container-fluid">
 
           <a href="#" className="navbar-brand">
             <button className="btn btn-outilne border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-              <i className="fa-solid fa-bars"></i>
+              <i className="icon-navbar fa-solid fa-bars"></i>
             </button>
           </a>
           <NavLink to={"/"} className="navbar-brand">
@@ -59,7 +59,7 @@ export const Header = (props) => {
                   <div className="d-flex">
                     <div className="dropdown">
                       <button className="btn btn-outline border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i className="fa-solid fa-ellipsis"></i>
+                        <i className="icon-navbar fa-solid fa-ellipsis"></i>
                       </button>
                       <ul className="dropdown-menu">
                         <li><a className="dropdown-item" href="#">Settings</a></li>
@@ -72,12 +72,12 @@ export const Header = (props) => {
                     </div>
                     <div className="dropdown">
                       <button className="btn btn-outline border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i className="fa-solid fa-user" style={userLogo}></i>
+                        <i className="icon-navbar fa-solid fa-user"></i>
                       </button>
                       <ul className="dropdown-menu">
                         <li className="d-flex p-2">
                           <div className="my-auto">
-                            <i className="fa-solid fa-circle-user" style={userLogo1}></i>
+                            <i className="icon-navbar fa-solid fa-circle-user"></i>
                           </div>
                           <div className="container">
                             <strong>Bahuguna, Vikas</strong>
