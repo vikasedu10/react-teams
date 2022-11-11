@@ -133,3 +133,12 @@ background: #555;
 .feed-delete-icon {
     color: rgb(204, 81, 81);
 }
+
+.office-icons {
+    width: 40px;
+}
+
+.page-not-found {
+    width: 40%;
+    height: 40%;
+}

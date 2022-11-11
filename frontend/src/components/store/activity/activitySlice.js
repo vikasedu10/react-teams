@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initState = localStorage.getItem("teams-activity")
-console.log(initState)
+// console.log(initState)
 
 export const activitySlice = createSlice({
     name: "activity",

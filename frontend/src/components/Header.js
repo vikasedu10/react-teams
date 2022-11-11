@@ -114,7 +114,27 @@ export const Header = (props) => {
           <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div className="offcanvas-body">
-          <p>This list will contain all the applications of Microsoft.</p>
+          <div className="row align-items start px-4 py-4">
+            <div className="col-3 py-4">
+            <img className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-office-2019.png" />
+            </div>
+            <div className="col-3 py-4">
+            <img className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-onenote-2019.png" />
+            </div>
+            <div className="col-3 py-4">
+            <img className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-excel-2019.png" />
+            </div>
+            <div className="col-3 py-4">
+            <img className="office-icons" src="https://img.icons8.com/color/512/microsoft-word-2019--v2.png" />
+            </div>
+            <div className="col-3 py-4">
+            <img className="office-icons" src="https://img.icons8.com/color/2x/microsoft-outlook-2019--v2.png" />
+            </div>
+            <div className="col-3 py-4">
+            <img className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-power-automate-2020.png" />
+            </div>
+            
+          </div>
         </div>
       </div>
     </>

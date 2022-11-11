@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import feedReducer from "./feed/feedSlice";'./feed/feedSlice'
+import feedReducer from "./feed/feedSlice";
 
 export const store = configureStore({
     reducer: {

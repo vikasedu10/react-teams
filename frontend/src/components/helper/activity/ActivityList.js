@@ -70,7 +70,8 @@ export const ActivityList = () => {
                 <div className='d-flex justify-content-between my-3 px-3'>
                     <h4>Your activities</h4>
                     <div>
-                        <i className="fa-solid fa-arrow-down-short-wide"></i>
+                        {/* <i className="fa-solid fa-arrow-down-short-wide"></i> */}
+                        <img className='office-icons' src='https://img.icons8.com/fluency/512/microsoft-office-2019.png' />
                     </div>
                 </div>
                 <hr />

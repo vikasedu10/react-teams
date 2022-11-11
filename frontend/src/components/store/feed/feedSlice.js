@@ -9,8 +9,14 @@ const initialState = {
 const feedSlice = createSlice({
     name: "feed",
     initialState,
+    reducers: {
+        clearFeed: (state) => {
+            state.feeds = [];
+        }
+    }
 });
 
-console.log(initialState)
+export const {clearFeed} = feedSlice.actions
+// console.log(initialState)
 
 export default feedSlice.reducer;

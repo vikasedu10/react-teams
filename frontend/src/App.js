@@ -11,6 +11,7 @@ import { Activity } from "./components/Activity";
 import { ChatContent } from "./components/helper/chats/ChatContent";
 import { ActivityContent } from "./components/helper/activity/ActivityContent";
 import { FeedContent } from "./components/helper/feed/FeedContent";
+import { PNF } from "./components/PNF";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
     <Router>
       <Header title="Microsoft Teams" searchBar="true" />
       <Routes>
+        <Route path="*" element={<PNF />} />
         <Route path="/" element={<Navigate replace to="/teams" />} />
 
         <Route path="/teams" element={<Home />}>
