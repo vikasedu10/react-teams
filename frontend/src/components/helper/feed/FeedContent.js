@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-import { FeedSection } from './FeedData';
 import { FeedData, FeedHeaderSection } from './FeedData';
 import { useDispatch, useSelector } from 'react-redux'
 import { clearFeed } from '../../store/feed/feedSlice';

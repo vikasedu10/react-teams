@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Outlet, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../../Icon.css';
 import { ActivityContent } from './ActivityContent';
-import AddActivity from './AddActivity';
 
 export const ActivityList = () => {
 
@@ -71,7 +70,7 @@ export const ActivityList = () => {
                     <h4>Your activities</h4>
                     <div>
                         {/* <i className="fa-solid fa-arrow-down-short-wide"></i> */}
-                        <img className='office-icons' src='https://img.icons8.com/fluency/512/microsoft-office-2019.png' />
+                        <img alt='img1' className='office-icons' src='https://img.icons8.com/fluency/512/microsoft-office-2019.png' />
                     </div>
                 </div>
                 <hr />

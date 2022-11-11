@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import people_thumbnail_1 from '../../../static/images/people/1.jpg';
 import '../../Icon.css';
 import { ChatContent } from './ChatContent';

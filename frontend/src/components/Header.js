@@ -1,14 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const userLogo = {
-  fontSize: "21px",
-  color: "blue",
-}
-const userLogo1 = {
-  fontSize: "51px",
-  color: "blue",
-}
 export const Header = (props) => {
   return (
     <>
@@ -16,11 +8,11 @@ export const Header = (props) => {
       <nav className="navbar-dark navbar navbar-expand-lg">
         <div className="container-fluid">
 
-          <a href="#" className="navbar-brand">
+          <NavLink className="navbar-brand">
             <button className="btn btn-outilne border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
               <i className="icon-navbar fa-solid fa-bars"></i>
             </button>
-          </a>
+          </NavLink>
           <NavLink to={"/"} className="navbar-brand">
             {props.title}
           </NavLink>
@@ -62,12 +54,12 @@ export const Header = (props) => {
                         <i className="icon-navbar fa-solid fa-ellipsis"></i>
                       </button>
                       <ul className="dropdown-menu">
-                        <li><a className="dropdown-item" href="#">Settings</a></li>
+                        <li><NavLink className="dropdown-item">Settings</NavLink></li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><a className="dropdown-item" href="#">Keyboard Shortcuts</a></li>
-                        <li><a className="dropdown-item" href="#">About</a></li>
-                        <li><a className="dropdown-item" href="#">Download the desktop app</a></li>
-                        <li><a className="dropdown-item" href="#">Download the mobile app</a></li>
+                        <li><NavLink className="dropdown-item">Keyboard Shortcuts</NavLink></li>
+                        <li><NavLink className="dropdown-item">About</NavLink></li>
+                        <li><NavLink className="dropdown-item">Download the desktop app</NavLink></li>
+                        <li><NavLink className="dropdown-item">Download the mobile app</NavLink></li>
                       </ul>
                     </div>
                     <div className="dropdown">
@@ -89,12 +81,12 @@ export const Header = (props) => {
                           </div>
                         </li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><a className="dropdown-item" href="#">Saved</a></li>
+                        <li><NavLink className="dropdown-item">Saved</NavLink></li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><a className="dropdown-item" href="#">Manage account</a></li>
-                        <li><a className="dropdown-item" href="#">Teams for personal use</a></li>
+                        <li><NavLink className="dropdown-item">Manage account</NavLink></li>
+                        <li><NavLink className="dropdown-item">Teams for personal use</NavLink></li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><a className="dropdown-item" href="#">Sign out</a></li>
+                        <li><NavLink className="dropdown-item">Sign out</NavLink></li>
                       </ul>
                     </div>
 
@@ -116,22 +108,22 @@ export const Header = (props) => {
         <div className="offcanvas-body">
           <div className="row align-items start px-4 py-4">
             <div className="col-3 py-4">
-            <img className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-office-2019.png" />
+            <img alt="image1" className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-office-2019.png" />
             </div>
             <div className="col-3 py-4">
-            <img className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-onenote-2019.png" />
+            <img alt="image2" className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-onenote-2019.png" />
             </div>
             <div className="col-3 py-4">
-            <img className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-excel-2019.png" />
+            <img alt="image3" className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-excel-2019.png" />
             </div>
             <div className="col-3 py-4">
-            <img className="office-icons" src="https://img.icons8.com/color/512/microsoft-word-2019--v2.png" />
+            <img alt="image4" className="office-icons" src="https://img.icons8.com/color/512/microsoft-word-2019--v2.png" />
             </div>
             <div className="col-3 py-4">
-            <img className="office-icons" src="https://img.icons8.com/color/2x/microsoft-outlook-2019--v2.png" />
+            <img alt="image5" className="office-icons" src="https://img.icons8.com/color/2x/microsoft-outlook-2019--v2.png" />
             </div>
             <div className="col-3 py-4">
-            <img className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-power-automate-2020.png" />
+            <img alt="image6" className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-power-automate-2020.png" />
             </div>
             
           </div>
