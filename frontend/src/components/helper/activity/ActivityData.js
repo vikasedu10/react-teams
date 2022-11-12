@@ -3,7 +3,10 @@ import React from 'react'
 export const ActivityData = (props) => {
   return (
     <div className='activities-div'>
+      <div className='d-flex justify-content-between'>
         <strong>{props.activity.title}</strong>
+        <button onClick={() => {props.deleteActivity(props.activity)}} className="fa-solid fa-trash"></button>
+    </div>
         <div className='my-2 col-12'>
             {props.activity.description}
             <hr />

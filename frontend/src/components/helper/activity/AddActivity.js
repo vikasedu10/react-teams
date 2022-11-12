@@ -24,9 +24,7 @@ function AddActivity() {
         };
         
         setActivities([...activities, myActivity]);
-        
         localStorage.setItem("teams-activity", JSON.stringify(activities));
-
     }
     
     const [activities, setActivities] = useState(initActivity)

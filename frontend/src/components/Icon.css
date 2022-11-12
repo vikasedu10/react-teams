@@ -18,6 +18,9 @@
     color: white;
 }
 
+.fa-trash {
+    color: rgb(214, 76, 76);
+}
 
 .option-list {
     background-color: rgb(238, 238, 238);

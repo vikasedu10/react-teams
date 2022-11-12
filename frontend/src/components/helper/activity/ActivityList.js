@@ -30,7 +30,6 @@ export const ActivityList = () => {
 
     let initActivity;
     
-    console.log(localStorage.getItem("teams-activity"));
     if (localStorage.getItem("teams-activity") === 'undefined') {
         initActivity = [];
     } else {
@@ -54,8 +53,16 @@ export const ActivityList = () => {
         setActivities([...activities, myActivity]);
         
         localStorage.setItem("teams-activity", JSON.stringify(activities));
-        console.log(localStorage.getItem("teams-activity"));
+        // console.log(localStorage.getItem("teams-activity"));
+    }
 
+    const deleteActivity = (currentActivity) => {
+        setActivities(
+            activities.filter((e) => {
+                return e !== currentActivity;
+            })
+        );
+        localStorage.setItem("activities", JSON.stringify(activities))
     }
     
     const [activities, setActivities] = useState(initActivity)
@@ -108,7 +115,7 @@ export const ActivityList = () => {
                     </div>
                 </div>
             </div>
-            <ActivityContent activities={activities} addActivity={addActivity} />
+            <ActivityContent activities={activities} addActivity={addActivity} deleteActivity={deleteActivity} />
         </>
     )
 }

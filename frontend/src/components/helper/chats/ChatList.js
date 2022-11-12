@@ -21,7 +21,7 @@ export const ChatList = (props) => {
 
                 <div className='row option-content-chats-div'>
                 <div className='row'>
-                    <div className='d-flex'>
+                    <div className='d-flex py-3'>
                         <div className='mx-2'>
                             <i className="fa-solid fa-caret-down"></i>
                         </div>
@@ -41,7 +41,7 @@ export const ChatList = (props) => {
                         </button>
                     </div>
                 </div>
-                    <div className='d-flex'>
+                    <div className='d-flex py-3'>
                         <div className='mx-2'>
                             <i className="fa-solid fa-caret-down"></i>
                         </div>

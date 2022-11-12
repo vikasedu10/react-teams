@@ -33,7 +33,7 @@ export const ActivityContent = (props) => {
                             :
                         props.activities.map((activity) => {
                             return (
-                                    <ActivityData setTitle={setTitle} setDescription={setDescription} activity={activity} key={activity.sno} />
+                                    <ActivityData setTitle={setTitle} setDescription={setDescription} activity={activity} deleteActivity={props.deleteActivity} key={activity.sno} />
                                 ) 
                                 
                         })

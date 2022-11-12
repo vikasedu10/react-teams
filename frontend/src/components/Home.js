@@ -19,9 +19,9 @@ export const Home = () => {
       <ActivityList />
       :
       (
-      currrentState === 'feed' ? 
+      currrentState === 'feed' || window.location.pathname.match('feed') ? 
         <FeedContent /> : (
-          currrentState === 'chat' ?
+          currrentState === 'chat' || window.location.pathname.match('chat') ?
           <ChatList /> : <ChatList />
         )
       
