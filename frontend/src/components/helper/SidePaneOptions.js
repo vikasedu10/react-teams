@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const SidePaneOptions = (props) => {
     return (
-        <div className='col-1 border all-option'>
+        <div className='col-1 border'>
 
             <div className='d-flex container flex-column'>
                 <div className="list-group">

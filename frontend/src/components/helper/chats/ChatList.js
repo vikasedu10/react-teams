@@ -11,7 +11,7 @@ export const ChatList = (props) => {
     return (
         <>
             <div className='col-3'> {/* Add 'row' class if anything breaks */}
-                <div className='d-flex justify-content-between my-3 px-3'>
+                <div className='d-flex justify-content-between my- px-3'>
                     <h4>Chat</h4>
                     <div>
                         <i className="fa-solid fa-arrow-down-short-wide"></i>
