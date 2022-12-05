@@ -47,19 +47,21 @@ export const Header = (props) => {
                   </button> */}
                   </form> : ""}
                 </li>
+                    
                 <li className="ms-auto col-4">
                   <div className="d-flex">
                     <div className="dropdown">
                       <button className="btn btn-outline border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i className="icon-navbar fa-solid fa-ellipsis"></i>
                       </button>
+
                       <ul className="dropdown-menu">
-                        <li><NavLink className="dropdown-item">Settings</NavLink></li>
+                        <li><span className="dropdown-item">Settingss</span></li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><NavLink className="dropdown-item">Keyboard Shortcuts</NavLink></li>
-                        <li><NavLink className="dropdown-item">About</NavLink></li>
-                        <li><NavLink className="dropdown-item">Download the desktop app</NavLink></li>
-                        <li><NavLink className="dropdown-item">Download the mobile app</NavLink></li>
+                        <li><span className="dropdown-item">Keyboard Shortcuts</span></li>
+                        <li><span className="dropdown-item">About</span></li>
+                        <li><span className="dropdown-item">Download the desktop app</span></li>
+                        <li><span className="dropdown-item">Download the mobile app</span></li>
                       </ul>
                     </div>
                     <div className="dropdown">
@@ -81,12 +83,12 @@ export const Header = (props) => {
                           </div>
                         </li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><NavLink className="dropdown-item">Saved</NavLink></li>
+                        <li><span className="dropdown-item">Saved</span></li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><NavLink className="dropdown-item">Manage account</NavLink></li>
-                        <li><NavLink className="dropdown-item">Teams for personal use</NavLink></li>
+                        <li><span className="dropdown-item">Manage account</span></li>
+                        <li><span className="dropdown-item">Teams for personal use</span></li>
                         <li><hr className="dropdown-divider" /></li>
-                        <li><NavLink className="dropdown-item">Sign out</NavLink></li>
+                        <li><span className="dropdown-item">Sign out</span></li>
                       </ul>
                     </div>
 
@@ -108,24 +110,24 @@ export const Header = (props) => {
         <div className="offcanvas-body">
           <div className="row align-items start px-4 py-4">
             <div className="col-3 py-4">
-            <img alt="image1" className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-office-2019.png" />
+              <img alt="image1" className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-office-2019.png" />
             </div>
             <div className="col-3 py-4">
-            <img alt="image2" className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-onenote-2019.png" />
+              <img alt="image2" className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-onenote-2019.png" />
             </div>
             <div className="col-3 py-4">
-            <img alt="image3" className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-excel-2019.png" />
+              <img alt="image3" className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-excel-2019.png" />
             </div>
             <div className="col-3 py-4">
-            <img alt="image4" className="office-icons" src="https://img.icons8.com/color/512/microsoft-word-2019--v2.png" />
+              <img alt="image4" className="office-icons" src="https://img.icons8.com/color/512/microsoft-word-2019--v2.png" />
             </div>
             <div className="col-3 py-4">
-            <img alt="image5" className="office-icons" src="https://img.icons8.com/color/2x/microsoft-outlook-2019--v2.png" />
+              <img alt="image5" className="office-icons" src="https://img.icons8.com/color/2x/microsoft-outlook-2019--v2.png" />
             </div>
             <div className="col-3 py-4">
-            <img alt="image6" className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-power-automate-2020.png" />
+              <img alt="image6" className="office-icons" src="https://img.icons8.com/fluency/512/microsoft-power-automate-2020.png" />
             </div>
-            
+
           </div>
         </div>
       </div>

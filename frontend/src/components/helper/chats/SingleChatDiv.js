@@ -1,14 +1,15 @@
 import React from 'react'
+
 import people_thumbnail_1 from '../../../static/images/people/1.jpg';
 
 export const ChatBoxFromSender = (props) => {
   return (
-    <div className='one-message-box container my-3 md-4 d-flex justify-content-start'>
+    <div key={props.index} className='one-message-box py-1 px-2 d-flex justify-content-start'>
       <div className='mx-2'>
         <img className='people-thumbnail-msg' src={props.image} alt="Tom" />
       </div>
       <div>
-        <span>{props.name}</span>
+        <span><strong>{props.name}</strong></span>
         <p className='message-style'>{props.message}</p>
       </div>
     </div>
@@ -17,9 +18,9 @@ export const ChatBoxFromSender = (props) => {
 
 export const ChatBoxFromSelf = (props) => {
   return (
-    <div className='d-flex justify-content-end my-2 one-message-box-self container my-2 md-4 d-flex justify-content-start'>
+    <div key={props.index} className='ms-auto col-6 my-2 one-message-box-self d-flex'>
       <div>
-        <span>Yesterday 16:04</span>
+        <span><strong>Yesterday 16:04</strong></span>
         <p className='message-style'>You: {props.message}</p>
       </div>
     </div>
@@ -28,25 +29,25 @@ export const ChatBoxFromSelf = (props) => {
 
 export const ProfileSection = (props) => {
   return (
-    <div className='d-flex justify-content-between my-3 mx-3'>
+    <div key={props.index} className='d-flex justify-content-between my-3 mx-3'>
       <div className='d-flex justify-content-start'>
-        <img className='people-thumbnail border border-dark' src={props.image} />
+        <img alt='thumb' className='people-thumbnail border border-dark' src={props.image} />
         <div className='my-auto mx-2'>
           <strong>{props.name}</strong>
         </div>
         <div className='mx-1 my-auto'>
           <ul className="nav nav-tabs border-0">
             <li className="nav-item mx-0">
-              <a className="p-2 nav-link active" aria-current="page" href="#">Chat</a>
+              <i className="p-2 nav-link active" aria-current="page" href="#">Chat</i>
             </li>
             <li className="nav-item mx-0">
-              <a className="p-2 nav-link" href="#">Files</a>
+              <i className="p-2 nav-link" href="#">Files</i>
             </li>
             <li className="nav-item mx-0">
-              <a className="p-2 nav-link" href="#">Organization</a>
+              <i className="p-2 nav-link" href="#">Organization</i>
             </li>
             <li className="nav-item mx-0">
-              <a className="p-2 nav-link">Activity</a>
+              <i className="p-2 nav-link">Activity</i>
             </li>
           </ul>
         </div>

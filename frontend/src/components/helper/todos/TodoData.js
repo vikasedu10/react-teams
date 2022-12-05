@@ -1,7 +1,7 @@
 import React from 'react'
 import people_thumbnail_1 from '../../../static/images/people/1.jpg';
 
-export const FeedHeaderSection = (props) => {
+export const TodoHeaderSection = (props) => {
   return (
     <>
       <div className='d-flex justify-content-between my-3 mx-3'>
@@ -41,10 +41,8 @@ export const FeedHeaderSection = (props) => {
   )
 }
 
-export const FeedData = (props) => {
+export const TodoData = (props) => {
   return (
-    <>
-
     <div className='activities-div'>
       <strong>{props.title}</strong>
       <div className='my-2 col-12'>
@@ -52,12 +50,11 @@ export const FeedData = (props) => {
         <hr />
       </div>
     </div>
-    </>
   )
 }
 
 
-export const EditFeedData = (props) => {
+export const EditTodoData = (props) => {
   return (
     <div className='activities-div'>
       <form className='border'>

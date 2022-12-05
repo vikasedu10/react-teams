@@ -15,6 +15,10 @@
                 "message": "Hi Manpreet"
             },
             {
+                "from": "self", 
+                "message": "Doing good. 😁😁 This is the Longest AWS Series on Youtube in Hindi/Urdu. My aim is to empower all.who are not good in english, but they are willing to learn new things.AWS Series me main try krunga aapko maxiMum lab and theory padhane ki."
+            },
+            {
                 "from": "self",
                 "message": "How are you?"
             },

@@ -3,10 +3,10 @@ import { useEffect, useState } from "react";
 function AddActivity() {
     let initActivity;
     
-    if (localStorage.getItem("teams-activity") === null) {
+    if (localStorage.getItem("teamsActivity") === null) {
         initActivity = [];
     } else {
-        initActivity = JSON.parse(localStorage.getItem("teams-activity"));
+        initActivity = JSON.parse(localStorage.getItem("teamsActivity"));
     }
     
     const addActivity = (title, description) => {
@@ -24,12 +24,12 @@ function AddActivity() {
         };
         
         setActivities([...activities, myActivity]);
-        localStorage.setItem("teams-activity", JSON.stringify(activities));
+        localStorage.setItem("teamsActivity", JSON.stringify(activities));
     }
     
     const [activities, setActivities] = useState(initActivity)
     useEffect(() => {
-        localStorage.setItem("teams-activity", JSON.stringify(activities));
+        localStorage.setItem("teamsActivity", JSON.stringify(activities));
     }, [activities]);
     
     return (

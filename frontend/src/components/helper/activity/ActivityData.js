@@ -5,9 +5,9 @@ export const ActivityData = (props) => {
     <div className='activities-div'>
       <div className='d-flex justify-content-between'>
         <strong>{props.activity.title}</strong>
-        <button onClick={() => {props.deleteActivity(props.activity)}} className="fa-solid fa-trash"></button>
+        <button onClick={() => {props.deleteActivity(props.activity)}} className="fa-solid fa-trash p-2 border"></button>
     </div>
-        <div className='my-2 col-12'>
+        <div className='col-11'>
             {props.activity.description}
             <hr />
         </div>
