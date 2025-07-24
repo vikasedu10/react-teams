@@ -3,14 +3,15 @@ import { useEffect, useState } from "react"
 import { CREATE_TODO_MUTATION, DELETE_TODO_MUTATION } from "../../../graphql/mutation/mutation"
 import { GET_TODOS } from "../../../graphql/query/query"
 import { AboutTheSection } from "./AboutTheSection"
+import { UpdateTodoModal } from "./UpdateTodoModal"
 
 export const TodoContent = (props) => {
     const [todos, setTodos] = useState([])
-    
-    const { loading, refetch, error, data } = useQuery(GET_TODOS)
-    const [addTodo, {err}] = useMutation(CREATE_TODO_MUTATION)
-    const [deleteTodo, {er}] = useMutation(DELETE_TODO_MUTATION)
     const [title, setTitle] = useState("")
+
+    const { loading, refetch, error, data } = useQuery(GET_TODOS)
+    const [addTodo, { err }] = useMutation(CREATE_TODO_MUTATION)
+    const [deleteTodo, { er }] = useMutation(DELETE_TODO_MUTATION)
     useEffect(() => {
         if (data) {
             setTodos(data.todos)
@@ -21,7 +22,7 @@ export const TodoContent = (props) => {
         todo.preventDefault()
         await addTodo({
             variables: {
-                title: title,  
+                title: title,
             }
         })
         if (err) {
@@ -34,7 +35,7 @@ export const TodoContent = (props) => {
     const deleteTodoByID = async (id) => {
         deleteTodo({
             variables: {
-                id: id.slice(10, id.length-2),
+                id: id.slice(10, id.length - 2),
             }
         })
         if (er) {
@@ -42,6 +43,15 @@ export const TodoContent = (props) => {
         }
         refetch()
     }
+
+    const sliceTodoID = (id) => {
+        if (id.includes("ObjectID")) {
+            return id.slice(10,id.length-2)
+        } else return id
+    }
+    useEffect (() => {
+        document.title = "Teams | Todos"
+    })
     return (
         <>
             <div className='col-11 d-flex '>
@@ -81,7 +91,7 @@ export const TodoContent = (props) => {
                                                 <tbody>
                                                     {todos.slice(0).reverse().map((data, index) => {
                                                         return (
-                                                            <tr key={data.id}>
+                                                            <tr key={index}>
                                                                 <th scope="col">{index + 1}</th>
                                                                 <th scope="col">{data.title}</th>
                                                                 <th scope="col">
@@ -93,21 +103,24 @@ export const TodoContent = (props) => {
                                                                 </th>
                                                                 <td>
                                                                     <div className="btn-group" role="group" aria-label="Basic mixed styles example">
+                                                                        <button type="button" className="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target={"#editTodoActionModal-"+sliceTodoID(data.id)}>Edit</button>
                                                                         <button type="button" onClick={() => { deleteTodoByID(data.id) }} className="btn btn-sm btn-danger">Delete</button>
                                                                     </div>
-                                                                </td>
 
+                                                                <UpdateTodoModal refetch={refetch} title={data.title} data={data} sliceTodoID={sliceTodoID} />
+                                                                </td>
                                                             </tr>
                                                         )
                                                     }
-
                                                     )}
                                                 </tbody>
+
                                             </table>
                                         </>
                                 )
                             }
                             <br />
+
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ActivityContent, FeedContent } from './helper/feed/FeedContent'
+import { FeedContent } from './helper/feed/FeedContent'
 
 export const Feed = () => {
   return (

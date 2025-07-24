@@ -27,7 +27,7 @@ export const Home = () => {
                   currrentState === 'chat' || window.location.pathname.match('chat') ?
                     <ChatList /> : (
                       currrentState === 'todos' || window.location.pathname.match('todos') ?
-                        <TodoContent /> : <UserContent />
+                        <TodoContent /> : <TodoContent />
                     )
                 )
             )

@@ -44,7 +44,6 @@ export const FeedHeaderSection = (props) => {
 export const FeedData = (props) => {
   return (
     <>
-
     <div className='activities-div'>
       <strong>{props.title}</strong>
       <div className='my-2 col-12'>

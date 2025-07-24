@@ -15,8 +15,12 @@ export const UpdateUserForm = (props) => {
             location: updateLocation,
             title: updateTitleStack,
         }
+        
         await axiosConnector.put(`/user/${id}`, myUser)
         props.setShowUpdateForm(false)
+        setUpdateName("")
+        setUpdateLocation("")
+        setUpdateTitleStack("")
         props.retreiveUsersHandler()
     }
     return (

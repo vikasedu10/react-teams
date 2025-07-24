@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import '../../Icon.css';
-// import { useLocation } from 'react-router-dom';
 import { WriteMessage } from './WriteMessage';
 import Chats from "./chats.json";
 import { ChatBoxFromSelf, ChatBoxFromSender, ProfileSection } from './SingleChatDiv';
 
 export const ChatContent = (props) => {
-    // const location = useLocation()
     const testStyle = {
         height: "85%"
     }
@@ -19,6 +17,13 @@ export const ChatContent = (props) => {
     const [message, setMessage] = useState("");
 
     const [peopleChat, setPeopleChat] = useState([]);
+    const defaultMailSelection = "manpreet.b.bhatia@accenture.com"
+
+    if (props.currentChatState["selected"] === 'defaultFirst') {
+        document.title = defaultMailSelection
+    } else {
+
+    }
     useEffect(() => {
         setPeopleChat(Chats)
     }, [peopleChat]);
@@ -65,7 +70,7 @@ export const ChatContent = (props) => {
                                     <ChatBoxFromSelf key={index} message={msg.message} />
                             })}
                         </div>
-                        <WriteMessage currentEnterprise={"manpreet.b.bhatia@accenture.com"} setMessage={setMessage} setPeopleChat={setPeopleChat} message={message} />
+                        <WriteMessage currentEnterprise={defaultMailSelection} setMessage={setMessage} setPeopleChat={setPeopleChat} message={message} />
                     </>
                 }
             </div>

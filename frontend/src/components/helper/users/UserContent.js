@@ -102,7 +102,6 @@ export const UserContent = (props) => {
                                                             <UserList e={e} index={index} updateUserByID={updateUserByID} deleteUserByID={deleteUserByID} />
                                                         }
                                                     </>
-
                                                 )
                                             })}
                                         </tbody>

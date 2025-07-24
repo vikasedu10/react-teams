@@ -8,6 +8,7 @@ import Chats from "./chats.json";
 
 export const ChatList = (props) => {
     const [currentChatState, setCurrentChatState] = useState({ selected: 'defaultFirst' })
+    document.title = "Teams | Chats"
     const navigate = useNavigate()
     return (
         <>
